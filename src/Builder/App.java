@@ -82,12 +82,12 @@ public class App {
         String[] desserts = {"Milkshake", "Lemon Mousse", "Chocolate Ice Cream", "Açaí"};
         BurgerShop order;
         
-        Scanner myObj = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         printMenu(1);
         
         System.out.printf("Select your Burger: ");
-        choice = myObj.nextInt();
+        choice = input.nextInt();
 
         BurgerShopBuilder burgerShopBuilder = new BurgerShopBuilder(hamburgers[choice - 1]);
 
@@ -96,7 +96,7 @@ public class App {
                 printMenu(1);
 
                 System.out.printf("Select a Hamburger: ");
-                choice = myObj.nextInt();
+                choice = input.nextInt();
 
                 burgerShopBuilder = new BurgerShopBuilder(hamburgers[choice -1]);
             }
@@ -104,7 +104,7 @@ public class App {
             printMenu(2);
 
             System.out.printf("Select a Drink: ");
-            choice = myObj.nextInt();
+            choice = input.nextInt();
 
             if(choice != 0){
                 burgerShopBuilder.orderDrink(drinks[choice - 1]);
@@ -113,7 +113,7 @@ public class App {
             printMenu(3);
 
             System.out.printf("Select a type of Fries: ");
-            choice = myObj.nextInt();
+            choice = input.nextInt();
 
             if(choice != 0){
                 burgerShopBuilder.orderFries(fries[choice - 1]);
@@ -122,7 +122,7 @@ public class App {
             printMenu(4);
 
             System.out.printf("Select a type of Dessert: ");
-            choice = myObj.nextInt();
+            choice = input.nextInt();
 
             if(choice != 0){
                 burgerShopBuilder.orderDessert(desserts[choice - 1]);
@@ -141,11 +141,12 @@ public class App {
 
             System.out.printf("Do you want to make another order? ");
 
-            choice = myObj.nextInt();
+            choice = input.nextInt();
             if( choice == 0 ){
                 break;
             }
             orderNumber++;
         }
+        input.close();
     }
 }
