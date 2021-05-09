@@ -2,6 +2,9 @@ package BurgerShop;
 
 import java.io.IOException;
 
+import BurgerShop.Model.ExportOrder.Converter;
+import BurgerShop.Model.ExportOrder.ToCSV;
+import BurgerShop.Model.ExportOrder.ToJSON;
 import BurgerShop.Model.Menu.MenuItem;
 import BurgerShop.Model.Menu.ShowMenu;
 import BurgerShop.Model.Order.OrderBuilder;
@@ -19,15 +22,15 @@ public class App {
 
         OrderedItems orderedItems = builder.prepareOrder();
 
-        orderedItems.showItems();
+        // Show Order
+        System.out.println("Pedido em CSV:\n");
 
-        System.out.println("\n");
-        System.out.println("Total Cost : " + orderedItems.getCost());
+        Converter csv = new ToCSV();
+        System.out.println(csv.getOrder(orderedItems));
 
-        // TODO “Imprimir o pedido” em .csv e .JSON com base no padrão Bridge;
-        // TODO Para imprimir o pedido, crie uma interface Converter com um get
-        // FormatoPedido. Em seguida, cria as duas classes de conversão para csv e
-        // JSON.
+        System.out.println("\nPedido em JSON:\n");
 
+        Converter json = new ToJSON();
+        System.out.println(json.getOrder(orderedItems));
     }
 }

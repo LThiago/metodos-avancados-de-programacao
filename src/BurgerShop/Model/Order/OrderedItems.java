@@ -5,7 +5,7 @@ import java.util.List;
 
 public class OrderedItems {
 
-    List<Item> items = new ArrayList<Item>();
+    public List<Item> items = new ArrayList<Item>();
 
     public void addItems(Item item) {
 
@@ -19,14 +19,5 @@ public class OrderedItems {
             cost += item.getPrice();
         }
         return cost;
-    }
-
-    public void showItems() {
-
-        for (Item item : items) {
-            System.out.println("Item is: " + item.getName());
-            System.out.println("Price is: " + item.getPrice());
-
-        }
     }
 }

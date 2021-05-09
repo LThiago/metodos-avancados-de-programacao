@@ -1,6 +1,7 @@
 package BurgerShop.Model.ExportOrder;
 
+import BurgerShop.Model.Order.OrderedItems;
+
 public interface Converter {
-    // public String getFormatoPedido();
-    public String getOrder();
+    public String getOrder(OrderedItems orderedItems);
 }

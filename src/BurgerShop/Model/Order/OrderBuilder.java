@@ -71,8 +71,6 @@ public class OrderBuilder {
                 break;
         }
 
-        sc.close();
-
         System.out.println("==================================================\n"
                 + "|             Enter the type of Drink            |\n"
                 + "==================================================\n"
@@ -198,6 +196,8 @@ public class OrderBuilder {
             default:
                 break;
         }
+
+        sc.close();
 
         return itemsOrder;
     }
