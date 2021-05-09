@@ -5,7 +5,7 @@ public class Course implements Cloneable {
     public String commonDiscipline1, commonDiscipline2, commonDiscipline3;
     public String specificDiscipline;
     public Integer courseLoad;
-    
+
     public Course(String courseName, String commonDiscipline1, String commonDiscipline2, String commonDiscipline3,
             String specificDiscipline, Integer courseLoad) {
         this.courseName = courseName;
@@ -66,12 +66,11 @@ public class Course implements Cloneable {
 
     @Override
     public String toString() {
-        return courseName + " - Course load: " + courseLoad + "h\n" +
-            "Common disciplines: " + commonDiscipline1 + ", " + commonDiscipline2 + ", " + commonDiscipline3 + "\n" +
-            "Specific Discipline: " + specificDiscipline;
+        return courseName + " - Course load: " + courseLoad + "h\n" + "Common disciplines: " + commonDiscipline1 + ", "
+                + commonDiscipline2 + ", " + commonDiscipline3 + "\n" + "Specific Discipline: " + specificDiscipline;
     }
 
-    public Course clone() throws CloneNotSupportedException{
+    public Course clone() throws CloneNotSupportedException {
         Course course = (Course) super.clone();
         return course;
     }

@@ -17,11 +17,12 @@ public class BurgerShopBuilder {
     public void orderFries(String fries) {
         this.fries = fries;
     }
+
     public void orderDessert(String dessert) {
         this.dessert = dessert;
     }
 
-    public BurgerShop finishOrder(){
+    public BurgerShop finishOrder() {
         return new BurgerShop(hamburger, drink, fries, dessert);
-    } 
+    }
 }

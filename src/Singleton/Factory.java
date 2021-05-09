@@ -6,10 +6,10 @@ public class Factory {
     protected int trianglesTotal;
 
     public static Factory instance;
- 
+
     protected Factory() {
     }
- 
+
     public static Factory getInstance() {
         if (instance == null)
             instance = new Factory();
@@ -17,55 +17,52 @@ public class Factory {
     }
 
     public String createCircle() {
-        if (circlesTotal < 1){
+        if (circlesTotal < 1) {
             circlesTotal++;
             return new String("Circle created");
-        }else{
+        } else {
             return new String("Maximum number of circles reached.");
         }
     }
 
     public String createIsoscelesTriangle() {
-        if (trianglesTotal < 3){
+        if (trianglesTotal < 3) {
             trianglesTotal++;
             return new String("Triangle created");
-        }else{
+        } else {
             return new String("Maximum number of triangles reached.");
-        }    
+        }
     }
 
     public String createEquilateralTriangle() {
-        if (trianglesTotal < 3){
+        if (trianglesTotal < 3) {
             trianglesTotal++;
             return new String("Triangle created");
-        }else{
+        } else {
             return new String("Maximum number of triangles reached.");
-        }    
+        }
     }
 
     public String createRightAngledTriangle() {
-        if (trianglesTotal < 3){
+        if (trianglesTotal < 3) {
             trianglesTotal++;
             return new String("Triangle created");
-        }else{
+        } else {
             return new String("Maximum number of triangles reached.");
-        }    
+        }
     }
 
     public String createSquare() {
-        if (squaresTotal < 5){
+        if (squaresTotal < 5) {
             squaresTotal++;
             return new String("Square created");
-        }else{
+        } else {
             return new String("Maximum number of squares reached.");
         }
     }
 
     public String showReport() {
-        return new String(
-           "Number of created Circles: " + circlesTotal +
-           "\nNumber of created Triangles: " + trianglesTotal +
-           "\nNumber of created Squares: " + squaresTotal
-        );
-    }      
+        return new String("Number of created Circles: " + circlesTotal + "\nNumber of created Triangles: "
+                + trianglesTotal + "\nNumber of created Squares: " + squaresTotal);
+    }
 }

@@ -10,7 +10,7 @@ public class App {
         Car car = factory.createCar();
         car.showInfo();
         System.out.println();
-        
+
         factory = new FiatFactory();
         car = factory.createCar();
         car.showInfo();

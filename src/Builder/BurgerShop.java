@@ -5,7 +5,7 @@ public class BurgerShop {
     private String drink;
     private String fries;
     private String dessert;
-    
+
     public BurgerShop(String hamburger, String drink, String fries, String dessert) {
         this.hamburger = hamburger;
         this.drink = drink;
@@ -47,38 +47,37 @@ public class BurgerShop {
 
     @Override
     public String toString() {
-        if(drink == null){
-            if(fries == null){
-                if( dessert == null){
+        if (drink == null) {
+            if (fries == null) {
+                if (dessert == null) {
                     return hamburger;
-                }else{
+                } else {
                     return hamburger + " + " + dessert;
                 }
 
-            }else{
-                if( dessert == null){
+            } else {
+                if (dessert == null) {
                     return hamburger + " + " + fries;
-                }else{
+                } else {
                     return hamburger + " + " + fries + " + " + dessert;
                 }
             }
-        }else{
-            if(fries == null){
-                if( dessert == null){
+        } else {
+            if (fries == null) {
+                if (dessert == null) {
                     return hamburger + " + " + drink;
-                }else{
+                } else {
                     return hamburger + " + " + drink + " + " + dessert;
                 }
 
-            }else{
-                if( dessert == null){
+            } else {
+                if (dessert == null) {
                     return hamburger + " + " + drink + " + " + fries;
-                }else{
+                } else {
                     return hamburger + " + " + drink + " + " + fries + " + " + dessert;
                 }
             }
         }
     }
-    
-    
+
 }

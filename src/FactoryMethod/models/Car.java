@@ -1,5 +1,5 @@
 package FactoryMethod.models;
 
-public interface Car { 
+public interface Car {
     void showInfo();
 }
