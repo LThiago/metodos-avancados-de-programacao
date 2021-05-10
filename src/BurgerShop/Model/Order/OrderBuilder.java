@@ -197,8 +197,6 @@ public class OrderBuilder {
                 break;
         }
 
-        sc.close();
-
         return itemsOrder;
     }
 
